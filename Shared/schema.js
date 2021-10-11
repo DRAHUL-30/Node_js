@@ -4,12 +4,12 @@ const schema = {
   registerSchema: joi.object({
     username: joi.string().required(),
     email: joi.string().email().required(),
-    password: joi.string().alphanum().min(6).max(10).required(),
+    password: joi.string().required(),
   }),
 
   loginSchema: joi.object({
     username: joi.string().required(),
-    password: joi.string().alphanum().min(6).max(10).required(),
+    password: joi.string().required(),
   }),
 
   postSchema: joi.object({
